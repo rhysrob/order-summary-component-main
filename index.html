@@ -19,9 +19,15 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     body {
+      margin: 0 auto;
       background: hsl(225, 100%, 94%) url('images/pattern-background-desktop.svg') no-repeat;
       background-size: contain;
-      font-family: 'Red Hat Display', sans-serif
+      font-family: 'Red Hat Display', sans-serif;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      ;
     }
 
     h1 {
@@ -43,29 +49,31 @@
     }
 
 
-
     .card {
       border-radius: 20px;
-      margin: 0 auto;
-      width: 375px;
+      width: 450px;
       text-align: center;
       background: white;
+      margin: 100px auto 30px;
+
 
     }
 
     .card-header {
       background: url('images/illustration-hero.svg') no-repeat;
-      background-size: contain;
-      height: 200px;
+      background-size: cover;
 
+      height: 200px;
+      width: 100%;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
+      background-position: center;
     }
 
     .card-body {
       display: flex;
       flex-direction: column;
-      padding: 25px;
+      padding: 45px;
     }
 
     .card-inner {
@@ -73,16 +81,20 @@
       flex-direction: row;
       align-items: center;
       background: #f5f7ff;
-
       border-radius: 12px;
-      padding: 15px;
+      padding: 25px;
       justify-content: space-between;
       margin: 15px 0;
-      height: 80px
+      height: 100px;
+      box-sizing: border-box;
     }
 
     .card-inner a {
       color: #3829e0;
+    }
+
+    .card-inner a:hover {
+      color: #766cf1;
     }
 
     button {
@@ -98,10 +110,20 @@
       box-shadow: 0px 10px 10px 5px rgba(56, 41, 224, 0.25);
     }
 
+    button:hover {
+      background: #766cf1;
+      cursor: pointer;
+
+    }
+
     .cancel-btn {
       text-decoration: none;
       font-weight: 700;
       color: #7280a7
+    }
+
+    .cancel-btn:hover {
+      color: #1f2f56;
     }
 
     .attribution {
@@ -111,6 +133,21 @@
 
     .attribution a {
       color: hsl(228, 45%, 44%);
+    }
+
+    @media screen and (max-width:375px) {
+      .card {
+        width: 325px;
+        margin: 75px 25px;
+      }
+
+      .card-body {
+        padding: 25px;
+      }
+
+      .card-inner {
+        padding: 15px;
+      }
     }
   </style>
 </head>
